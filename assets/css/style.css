@@ -1,0 +1,424 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* border: 1px solid #000; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-height: 2000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 7%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .logo span {
+  color: #cd1818;
+  font-style: italic;
+}
+
+.navbar .nav-list a {
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar .nav-list a:hover {
+  color: #cd1818;
+}
+
+.nav-extra a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.nav-extra {
+  display: none;
+}
+
+/* Content */
+.hero {
+  padding: 1.4rem 7%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/Ampera.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #cd1818;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #921212;
+}
+
+.sejarah {
+  padding: 7rem 7% 1.4rem;
+}
+
+.sejarah h2,
+.makanan h2,
+.wisata h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.sejarah h2 span,
+.makanan h2 span,
+.wisata h2 span {
+  color: #cd1818;
+}
+
+.sejarah .row {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.sejarah .img-sejarah {
+  flex: 1 1 35rem;
+  padding: 1rem;
+}
+
+.img-sejarah img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.sejarah .content-sejarah {
+  flex: 1 1 35rem;
+  padding: 1rem;
+}
+
+.content-sejarah h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content-sejarah p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  text-align: justify;
+}
+
+.makanan {
+  padding: 7rem 7% 1.4rem;
+}
+
+.makanan h2,
+.wisata h2 {
+  margin-bottom: 1.5rem;
+}
+
+.makanan p,
+.wisata p {
+  text-align: center;
+  max-width: 35rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.makanan .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.makanan .row .makanan-card {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.makanan .row .makanan-card .makanan-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.makanan .row .makanan-card .makanan-card-tittle {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.makanan .row .makanan-card .makanan-card-desk {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.wisata {
+  padding: 7rem 7% 1.4rem;
+}
+
+.wisata .row {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wisata .row .wisata-card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+}
+
+.wisata .row .wisata-card .img-wisata {
+  flex: 1 1 20rem;
+  padding: 1rem;
+}
+
+.img-wisata img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.wisata .row .content-wisata {
+  flex: 1 1 30rem;
+  padding: 1rem;
+}
+
+.wisata .row .content-wisata h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.wisata .row .content-wisata p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  text-align: justify;
+}
+
+.profile {
+  padding: 1.4rem 7%;
+}
+
+.profile section {
+  padding: 2rem;
+  background-color: #cd1818;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.profile article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile figure {
+  margin-right: 20px;
+}
+
+.profile figure img {
+  width: 210px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.profile figcaption {
+  color: #fff;
+}
+
+.profile h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #000;
+  padding: 1.4rem 7%;
+}
+
+footer .sosmed {
+  display: flex;
+  justify-content: center;
+}
+
+footer .sosmed a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 1rem;
+  opacity: 0.7;
+}
+
+footer .sosmed a:hover {
+  opacity: 1;
+}
+
+footer .menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer .menu a {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  opacity: 0.7;
+}
+
+footer .menu a:hover {
+  opacity: 1;
+}
+
+footer .copyrirght {
+  background-color: #333;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer .copyrirght p {
+  font-size: 1.2rem;
+}
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+  .nav-extra {
+    display: inline-block;
+  }
+
+  .navbar .nav-list {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .nav-list.active {
+    right: 0;
+  }
+
+  .navbar .nav-list a {
+    color: #333;
+    display: block;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .sejarah .row {
+    flex-wrap: wrap;
+  }
+
+  .wisata .row .wisata-card {
+    flex-wrap: wrap;
+  }
+
+  .profile article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
